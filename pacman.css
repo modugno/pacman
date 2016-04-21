@@ -1,0 +1,147 @@
+/* pacman block */
+.pacman {
+	position: relative;
+	float: left;
+	margin-top: 40px;
+}
+/*eyes*/
+.pacman .eyes {
+	position: absolute;
+	z-index: 1;
+	width: 15px;
+	height: 15px;
+	top: 35px;
+	background: #000;
+
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+	     -o-border-radius: 10px;
+	        border-radius: 10px;
+	
+	-webkit-transform: translateX(130px);
+	   -moz-transform: translateX(130px);
+	     -o-transform: translateX(130px);
+	        transform: translateX(130px);
+
+	animation: eyes 0.5s infinite linear;
+
+}
+.pacman .eyes:after {
+	content: "";
+	position: absolute;
+	z-index: 2;
+	width: 6px;
+	height: 6px;
+	left: 5px;
+	top: 1px;
+	background: #fff;
+	
+
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	   	 -o-border-radius: 4px;
+	        border-radius: 4px;
+}
+/* top */
+.pacman-one {
+	background: yellow;
+	width: 200px;
+	height: 100px;
+
+	-webkit-border-radius: 100px 100px 0 0;
+	   -moz-border-radius: 100px 100px 0 0;
+	     -o-border-radius: 100px 100px 0 0;
+	        border-radius: 100px 100px 0 0;
+
+	animation: eat-one 0.5s infinite linear;
+}
+/* bottom */
+.pacman-two {
+	background: yellow;
+	width: 200px;
+	height: 100px;
+
+	-webkit-border-radius: 0 0 100px 100px;
+	   -moz-border-radius: 0 0 100px 100px;
+	     -o-border-radius: 0 0 100px 100px;
+	        border-radius: 0 0 100px 100px;
+
+	animation: eat-two 0.5s infinite linear;
+}
+
+/* ANIMATIONS */
+@keyframes eat-one {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(-35deg);
+	}
+}
+@-webkit-keyframes eat-one {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(-35deg);
+	}
+}
+@-moz-keyframes eat-one {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(-35deg);
+	}
+}
+
+
+@keyframes eat-two {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(35deg);
+	}
+}
+@-webkit-keyframes eat-two {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(35deg);
+	}
+}
+@-moz-keyframes eat-two {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(35deg);
+	}
+}
+
+@keyframes eyes {
+	0% {
+		transform: translateX(130px);
+	}
+	50% {
+		transform: translateX(135px);
+	}
+}
+@-webkit-keyframes eyes {
+	0% {
+		transform: translateX(130px);
+	}
+	50% {
+		transform: translateX(135px);
+	}
+}
+@-moz-keyframes eyes {
+	0% {
+		transform: translateX(130px);
+	}
+	50% {
+		transform: translateX(135px);
+	}
+}

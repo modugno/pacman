@@ -1,0 +1,100 @@
+.ghost {
+	position: relative;
+	top: 40px;
+	left: 500px;
+	height: 180px;
+	width: 130px;
+	background: red;
+
+	-webkit-border-radius: 70px 70px 0 0;
+	   -moz-border-radius: 70px 70px 0 0;
+	     -o-border-radius: 70px 70px 0 0;
+	        border-radius: 70px 70px 0 0;
+}
+.ghost .eyes {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	background: #fff;
+
+	-webkit-border-radius: 20px;
+	   -moz-border-radius: 20px;
+	     -o-border-radius: 20px;
+	        border-radius: 20px;
+}
+.ghost .eyes:after {
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 10px;
+	background: blue;
+
+	-webkit-border-radius: 8px;
+	   -moz-border-radius: 8px;
+	     -o-border-radius: 8px;
+	        border-radius: 8px;
+
+	-webit-transform: translateX(1px);
+	  -moz-transform: translateX(1px);
+	    -o-transform: translateX(1px);
+	       transform: translateX(1px);
+
+	animation: blink 4s infinite linear;
+}
+.ghost .eyes:nth-child(1) {
+	top: 40px;
+	left: 20px;
+}
+.ghost .eyes:nth-child(2) {
+	top: 40px;
+	left: 70px;
+}
+.bottom {
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 0;
+
+	border-left: 33px solid transparent;
+	border-right: 33px solid transparent;
+	border-bottom: 40px solid #000;
+}
+.bottom:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 0;
+	left: 30px;
+	top: 0;
+
+	border-left: 33px solid transparent;
+	border-right: 33px solid transparent;
+	border-bottom: 40px solid #000;
+}
+
+@keyframes blink {
+	0%   { transform: translateX(1px);  }
+	40%  { transform: translateX(1px);  }
+	60%  { transform: translateX(10px); }
+	90%  { transform: translateX(10px); }
+	100% { transform: translateX(1px);  }
+	}
+}
+@-webkit-keyframes blink {
+	0%   { transform: translateX(1px);  }
+	40%  { transform: translateX(1px);  }
+	60%  { transform: translateX(10px); }
+	90%  { transform: translateX(10px); }
+	100% { transform: translateX(1px);  }
+	}
+}
+@-moz-keyframes blink {
+	0%   { transform: translateX(1px);  }
+	40%  { transform: translateX(1px);  }
+	60%  { transform: translateX(10px); }
+	90%  { transform: translateX(10px); }
+	100% { transform: translateX(1px);  }
+	}
+}
