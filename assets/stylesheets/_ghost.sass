@@ -1,0 +1,92 @@
+.ghost
+  position: relative
+  top: 40px
+  left: 500px
+  height: 180px
+  width: 130px
+  background: red
+  border-radius: 70px 70px 0 0
+
+  .eyes
+    position: absolute
+    width: 35px
+    height: 35px
+    background: #fff
+    border-radius: 20px
+
+    &::after
+      content: ''
+      position: absolute
+      width: 15px
+      height: 15px
+      top: 10px
+      background: blue
+      border-radius: 8px
+      -webit-transform: translate3d(1px,0,0)
+      transform: translate3d(1px,0,0)
+      animation: blink 4s infinite linear
+
+    &:nth-child(1)
+      top: 40px
+      left: 20px
+
+    &:nth-child(2)
+      top: 40px
+      left: 70px
+
+.bottom
+  position: absolute
+  width: 0
+  height: 0
+  bottom: 0
+  border-left: 33px solid transparent
+  border-right: 33px solid transparent
+  border-bottom: 40px solid #000
+
+  &::after
+    content: ''
+    position: absolute
+    width: 0
+    height: 0
+    bottom: 0
+    left: 30px
+    top: 0
+    border-left: 33px solid transparent
+    border-right: 33px solid transparent
+    border-bottom: 40px solid #000
+
+@keyframes blink
+  0%
+    transform: translate3d(1px,0,0)
+  40%
+    transform: translate3d(1px,0,0)
+  60%
+    transform: translate3d(10px,0,0)
+  90%
+    transform: translate3d(10px,0,0)
+  100%
+    transform: translate3d(1px,0,0)
+
+@-webkit-keyframes blink
+  0%
+    -webkit-transform: translate3d(1px,0,0)
+  40%
+    -webkit-transform: translate3d(1px,0,0)
+  60%
+    -webkit-transform: translate3d(10px,0,0)
+  90%
+    -webkit-transform: translate3d(10px,0,0)
+  100%
+    -webkit-transform: translate3d(1px,0,0)
+
+@-moz-keyframes blink
+  0%
+    transform: translate3d(1px,0,0)
+  40%
+    transform: translate3d(1px,0,0)
+  60%
+    transform: translate3d(10px,0,0)
+  90%
+    transform: translate3d(10px,0,0)
+  100%
+    transform: translate3d(1px,0,0)

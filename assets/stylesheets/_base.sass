@@ -1,0 +1,43 @@
+*
+  padding: 0
+  margin: 0
+  box-sizing : border-box
+
+  &::before,
+  &::after
+    box-sizing: inherit
+
+
+html,
+body
+  background-color: #000
+  font-family: 'Open Sans Condensed', sans-serif
+
+.container
+  position: relative
+  width: 100%
+  max-width: 800px
+  margin: 40px auto
+  padding: 50px
+  border: 2px dotted #2121de
+  border-radius: 10px
+
+p
+  text-align: center
+  clear: both
+  margin-top: 100px
+
+  span
+    font-size: 3em
+    color: #fff
+    text-shadow: 2px 2px #2121de
+
+  a
+    text-decoration: none
+    font-size: 1em
+    display: block
+    color: #fff
+
+    &:hover
+      text-decoration: underline
+
